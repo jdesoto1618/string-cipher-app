@@ -8,6 +8,8 @@ type ShiftSelectProps = {
 const shifts = Array.from({ length: 25 }, (_, i) => i + 1);
 
 export function ShiftSelect({ value, onChange }: ShiftSelectProps) {
+    const id = useId();
+
     return (
         <div className="flex flex-col items-center gap-3 sm:flex-row">
             <label htmlFor={id} className="text-xl">
