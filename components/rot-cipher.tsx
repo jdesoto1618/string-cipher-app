@@ -18,7 +18,7 @@ export function RotCipher() {
         <div className="flex flex-col gap-10">
             <section className="flex flex-col gap-8 alphabet-rows-wrapper">
                 <AlphabetRow title="Standard Alphabet" letters={alphabet_letters} />
-                <AlphabetRow title={`Rot ${shift} Cipher Alphabet`} letters={shiftedAlphabet} accent />
+                <AlphabetRow title={`Rot ${shift} Cipher Alphabet`} letters={shiftedAlphabet(shift)} accent />
             </section>
 
             <ShiftSelect value={shift} onChange={setShift} />
