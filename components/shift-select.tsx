@@ -20,7 +20,7 @@ export function ShiftSelect({ value, onChange }: ShiftSelectProps) {
                 id={id}
                 value={value}
                 onChange={(e) => onChange(Number(e.target.value))}
-                className="rounded bg-emerald-600 px-3 py-2 font-semibold text-white"
+                className="shift-selector rounded px-3 py-2 font-semibold text-white"
                 >
                 {shifts.map(shift => (
                     <option key={shift} value={shift}>Rot {shift}</option>

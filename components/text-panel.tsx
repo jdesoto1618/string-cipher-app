@@ -10,9 +10,9 @@ export function TextPanel({ text, onTextChange, ciphertext }: TextPanelProps) {
     const inputId = useId();
 
     return (
-        <div className="grid gap-8 rounded-lg border-2 border-emerald-500 bg-white p-6 shadow-md sm:p-10">
+        <div className="grid gap-8 rounded-lg border-2 border-emerald-500 bg-white p-4 shadow-md sm:p-8">
             <div className="flex flex-col gap-2">
-                <label htmlFor={inputId} className="text-2xl font-semibold text-emerald-700">
+                <label htmlFor={inputId} className="text-2xl font-semibold text-gray-800">
                     Plaintext
                 </label>
                 <textarea
@@ -21,18 +21,15 @@ export function TextPanel({ text, onTextChange, ciphertext }: TextPanelProps) {
                     onChange={(e) => onTextChange(e.target.value)}
                     rows={3}
                     placeholder="Type something..."
-                    className="rounded border-b-2 border-neutral-800 bg-neutral-50 p-3 text-xl outline-none focus:bg-white"
+                    className="rounded border-b-2 border-neutral-800 bg-neutral-100 p-3 text-xl outline-none focus:bg-white placeholder:text-gray-600 text-emerald-700"
                 />
             </div>
 
             <div className="flex flex-col gap-2">
-                <h2 className="text-2xl font-semibold text-emerald-700">Ciphertext</h2>
-                <output
-                    aria-live="polite"
-                    className="block min-h-16 whitespace-pre-wrap break-words p-3 text-xl"
-                >
+                <h2 className="text-2xl font-semibold text-gray-800">Ciphertext</h2>
+                <p aria-live="polite" className="rounded border-neutral-800 bg-neutral-100 text-emerald-700 p-3 text-xl">
                     {ciphertext}
-                </output>
+                </p>
             </div>
         </div>
     );

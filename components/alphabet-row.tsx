@@ -7,7 +7,7 @@ type AlphabetRowProps = {
 export function AlphabetRow({ title, letters, accent = false }: AlphabetRowProps) {
     return (
         <div className="text-center">
-            <h2 className="text-2xl font-semibold">{title}</h2>
+            <h2 className="text-2xl font-bold">{title}</h2>
 
             <ul
                 className="mt-4 flex flex-wrap justify-center gap-3"
