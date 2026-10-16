@@ -27,7 +27,7 @@ export function TextPanel({ text, onTextChange, ciphertext }: TextPanelProps) {
 
             <div className="flex flex-col gap-2">
                 <h2 className="text-2xl font-semibold text-gray-800">Ciphertext</h2>
-                <p aria-live="polite" className="rounded border-neutral-800 bg-neutral-100 text-emerald-700 p-3 text-xl">
+                <p aria-live="polite" className={`rounded border-neutral-800 bg-neutral-100 ${ciphertext ? "text-emerald-700" : "text-gray-500"} p-3 text-xl`}>
                     {ciphertext || "Type some text to see its ciphertext"}
                 </p>
             </div>
