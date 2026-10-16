@@ -21,14 +21,14 @@ export function TextPanel({ text, onTextChange, ciphertext }: TextPanelProps) {
                     onChange={(e) => onTextChange(e.target.value)}
                     rows={3}
                     placeholder="Type something..."
-                    className="rounded border-b-2 border-neutral-800 bg-neutral-100 p-3 text-xl outline-none focus:bg-white placeholder:text-gray-600 text-emerald-700"
+                    className="rounded border-b-2 border-neutral-800 bg-neutral-50 p-3 text-xl outline-none focus:bg-white placeholder:text-gray-500 text-emerald-700"
                 />
             </div>
 
             <div className="flex flex-col gap-2">
                 <h2 className="text-2xl font-semibold text-gray-800">Ciphertext</h2>
                 <p aria-live="polite" className="rounded border-neutral-800 bg-neutral-100 text-emerald-700 p-3 text-xl">
-                    {ciphertext}
+                    {ciphertext || "Type some text to see its ciphertext"}
                 </p>
             </div>
         </div>
